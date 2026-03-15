@@ -19,8 +19,8 @@ Once installed, the extension activates automatically and shows the remote URL i
 
 ## Commands
 
-| Command                     | Description                                   |
-| :-------------------------- | :-------------------------------------------- |
+| Command                     | Description                                                      |
+|:----------------------------|:-----------------------------------------------------------------|
 | `Git Remote: Select Remote` | Choose which remote URL to display (when multiple remotes exist) |
 
 ## Requirements
