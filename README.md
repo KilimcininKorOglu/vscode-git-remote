@@ -28,6 +28,16 @@ Once installed, the extension activates automatically and shows the remote URL i
 - Visual Studio Code 1.85.0 or later
 - A workspace with a git repository
 
+## Installation
+
+Download the latest `.vsix` file from the [Releases](https://github.com/KilimcininKorOglu/vscode-git-remote/releases) page and install it:
+
+```bash
+code --install-extension vscode-git-remote-0.1.0.vsix
+```
+
+Or install from VS Code: `Extensions` > `...` > `Install from VSIX...`
+
 ## Development
 
 ```bash
@@ -36,3 +46,16 @@ npm run build
 ```
 
 Press `F5` in VS Code to launch the Extension Development Host for testing.
+
+## Release
+
+A new release is automatically created via GitHub Actions when a version tag is pushed:
+
+```bash
+git tag v0.2.0
+git push origin v0.2.0
+```
+
+## License
+
+MIT
