@@ -33,7 +33,7 @@ Once installed, the extension activates automatically and shows the remote URL i
 Download the latest `.vsix` file from the [Releases](https://github.com/KilimcininKorOglu/vscode-git-remote/releases) page and install it:
 
 ```bash
-code --install-extension vscode-git-remote-0.1.0.vsix
+code --install-extension vscode-git-remote-<version>.vsix
 ```
 
 Or install from VS Code: `Extensions` > `...` > `Install from VSIX...`
