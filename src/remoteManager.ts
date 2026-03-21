@@ -11,6 +11,8 @@ interface GitRepository {
     readonly remotes: GitRemoteSource[];
     readonly onDidChange: vscode.Event<void>;
   };
+  getConfig(key: string): Promise<string>;
+  setConfig(key: string, value: string): Promise<string>;
 }
 
 interface GitApi {
@@ -64,6 +66,22 @@ export class RemoteManager implements vscode.Disposable {
         this.onDidChangeRemotesEmitter.fire();
       })
     );
+  }
+
+  async setPushDefault(remoteName: string): Promise<void> {
+    const repo = this.gitApi?.repositories[0];
+    if (repo) {
+      await repo.setConfig('remote.pushDefault', remoteName);
+    }
+  }
+
+  async getPushDefault(): Promise<string | undefined> {
+    const repo = this.gitApi?.repositories[0];
+    if (repo) {
+      const value = await repo.getConfig('remote.pushDefault');
+      return value || undefined;
+    }
+    return undefined;
   }
 
   getRemotes(): RemoteInfo[] {

@@ -31,6 +31,14 @@ async function selectRemote(): Promise<void> {
 
   if (selected) {
     selectedRemoteName = selected.remoteName;
+    try {
+      await remoteManager.setPushDefault(selected.remoteName);
+      vscode.window.showInformationMessage(
+        `Default push remote set to '${selected.remoteName}'.`
+      );
+    } catch {
+      vscode.window.showErrorMessage('Failed to set default push remote.');
+    }
     refreshStatusBar();
   }
 }
@@ -50,6 +58,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
   );
 
   await remoteManager.initialize();
+  selectedRemoteName = await remoteManager.getPushDefault();
   refreshStatusBar();
 }
 
