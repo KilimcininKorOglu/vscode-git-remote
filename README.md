@@ -7,6 +7,7 @@ A Visual Studio Code extension that displays the current git remote URL in the s
 - Displays the full git remote URL in the status bar with a globe icon
 - Shows a warning indicator when no remote is configured
 - Supports multiple remotes with a quick pick selector
+- Sets `remote.pushDefault` when a remote is selected, making it the default for `git push`
 - Automatically updates when git remotes change
 
 ## Usage
@@ -14,7 +15,7 @@ A Visual Studio Code extension that displays the current git remote URL in the s
 Once installed, the extension activates automatically and shows the remote URL in the status bar.
 
 - **Single remote**: The remote URL is displayed directly
-- **Multiple remotes**: Click the status bar item to select which remote to display
+- **Multiple remotes**: Click the status bar item to select which remote to display and set as the default push remote
 - **No remote**: A "No Remote" warning is shown
 
 ## Commands
@@ -52,8 +53,8 @@ Press `F5` in VS Code to launch the Extension Development Host for testing.
 A new release is automatically created via GitHub Actions when a version tag is pushed:
 
 ```bash
-git tag v0.2.0
-git push origin v0.2.0
+git tag v<version>
+git push origin v<version>
 ```
 
 ## License
