@@ -2,7 +2,7 @@
   "name": "vscode-git-remote",
   "displayName": "Git Remote URL",
   "description": "Displays the git remote URL in the status bar",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "publisher": "KilimcininKorOglu",
   "engines": {
     "vscode": "^1.85.0"
