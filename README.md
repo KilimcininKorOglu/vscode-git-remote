@@ -2,6 +2,8 @@
 
 A Visual Studio Code extension that displays the current git remote URL in the status bar.
 
+![Git Remote URL in status bar](screenshot/image.png)
+
 ## Features
 
 - Displays the full git remote URL in the status bar with a globe icon
